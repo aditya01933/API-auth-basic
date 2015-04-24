@@ -1,6 +1,4 @@
 class AccountController < ApplicationController
-
-  class AccountController < ApplicationController
   def signin
     token = ApiKey.create!
     msg = { token: token.access_token }
@@ -25,4 +23,3 @@ class AccountController < ApplicationController
   end
 end
 
-end
