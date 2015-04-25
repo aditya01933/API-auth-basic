@@ -1,5 +1,7 @@
 class AccountController < ApplicationController
   def signin
+
+
     token = ApiKey.create!
     msg = { token: token.access_token }
     respond_to do |format|
@@ -21,5 +23,11 @@ class AccountController < ApplicationController
       format.json { render json: msg }
     end
   end
+
+
+ #  private	
+	# def account_params	
+	# 	params.require(:account).permit(:title, :description)	
+	# end	
 end
 
